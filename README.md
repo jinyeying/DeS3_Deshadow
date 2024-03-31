@@ -17,10 +17,13 @@ For commercial use of the code and models, separate commercial licensing is avai
 ### Citations
 If this work is useful for your research, please cite our paper. 
 ```BibTeX
-@article{jin2022des3,
-  title={DeS3: Attention-driven Self and Soft Shadow Removal using ViT Similarity and Color Convergence},
-  author={Jin, Yeying and Yang, Wenhan and Ye, Wei and Yuan, Yuan and Tan, Robby T},
-  journal={arXiv preprint arXiv:2211.08089},
-  year={2022}
+@inproceedings{jin2024des3,
+  title={DeS3: Adaptive Attention-Driven Self and Soft Shadow Removal Using ViT Similarity},
+  author={Jin, Yeying and Ye, Wei and Yang, Wenhan and Yuan, Yuan and Tan, Robby T},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={38},
+  number={3},
+  pages={2634--2642},
+  year={2024}
 }
 ```
