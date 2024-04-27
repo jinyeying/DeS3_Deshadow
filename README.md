@@ -3,7 +3,19 @@
 ## Introduction
 This is an implementation of DeS3: Attention-driven Self and Soft Shadow Removal using ViT Similarity and Color Convergence
 
-### 1. SRD Dataset Results:
+## 1. Datasets
+1. SRD [Train](https://drive.google.com/file/d/1W8vBRJYDG9imMgr9I2XaA13tlFIEHOjS/view)|[BaiduPan](https://pan.baidu.com/s/1mj3BoRQ), [Test](https://drive.google.com/file/d/1GTi4BmQ0SJ7diDMmf-b7x2VismmXtfTo/view).
+[Shadow Masks](https://github.com/vinthony/ghost-free-shadow-removal)
+
+2. AISTD|ISTD+ [[link]](https://github.com/cvlab-stonybrook/SID) 
+
+3. LRSS: Soft Shadow Dataset [[link]](http://visual.cs.ucl.ac.uk/pubs/softshadows/)
+  
+4. USR: Unpaired Shadow Removal Dataset [[link]](https://drive.google.com/file/d/1PPAX0W4eyfn1cUrb2aBefnbrmhB1htoJ/view)
+
+5. UCF, UIUC: Self Shadow [[link]](https://drive.google.com/file/d/1jyzJm13VbvXGocwmywsJ51yqWxAwt_pP/view)
+
+### 2. SRD Dataset Results:
 [Dropbox](https://www.dropbox.com/scl/fo/04qdaxrapog8vvikh24d5/h?rlkey=u3e4trwim1im4c2yvc8ig1duq&dl=0) |
 [BaiduPan](https://pan.baidu.com/s/1b-Elx5a9NHL5E0z_aHoydw?pwd=blk7) code:blk7
 
