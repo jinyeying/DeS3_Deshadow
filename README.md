@@ -9,16 +9,19 @@ This is an implementation of DeS3: Attention-driven Self and Soft Shadow Removal
 
 2. AISTD|ISTD+ [[link]](https://github.com/cvlab-stonybrook/SID) 
 
-3. LRSS: Soft Shadow Dataset [[link]](http://visual.cs.ucl.ac.uk/pubs/softshadows/)
+3. LRSS: Soft Shadow Dataset [[link]](http://visual.cs.ucl.ac.uk/pubs/softshadows/)<br>
+   The LRSS dataset contains 134 shadow images (62 pairs of shadow and shadow-free images). <br>
+   We use 34 pairs for testing and 100 shadow images for training. For shadow-free training images, 28 from LRSS and 72 randomly selected from the USR dataset.<br>
+   |[Dropbox](https://www.dropbox.com/scl/fo/3dt75e23riozwa6uczeqd/ABNkIZKaP8jFarfNrUUjpVg?rlkey=eyfjn7dhd9pbz6rh247ylbt0c&st=01lh80r8&dl=0)|[BaiduPan](https://pan.baidu.com/s/1c_VsDVC92WnvI92v8cldsg?pwd=t9c7) code:t9c7|
+   | :-----------: | :-----------: |
   
-4. USR: Unpaired Shadow Removal Dataset [[link]](https://drive.google.com/file/d/1PPAX0W4eyfn1cUrb2aBefnbrmhB1htoJ/view)
+5. USR: Unpaired Shadow Removal Dataset [[link]](https://drive.google.com/file/d/1PPAX0W4eyfn1cUrb2aBefnbrmhB1htoJ/view)
 
-5. UCF, UIUC: Self Shadow [[link]](https://drive.google.com/file/d/1jyzJm13VbvXGocwmywsJ51yqWxAwt_pP/view)
+6. UCF, UIUC: Self Shadow [[link]](https://drive.google.com/file/d/1jyzJm13VbvXGocwmywsJ51yqWxAwt_pP/view)
 
 ### 2. SRD Dataset Results:
-[Dropbox](https://www.dropbox.com/scl/fo/04qdaxrapog8vvikh24d5/h?rlkey=u3e4trwim1im4c2yvc8ig1duq&dl=0) |
-[BaiduPan](https://pan.baidu.com/s/1b-Elx5a9NHL5E0z_aHoydw?pwd=blk7) code:blk7
-
+|[Dropbox](https://www.dropbox.com/scl/fo/04qdaxrapog8vvikh24d5/h?rlkey=u3e4trwim1im4c2yvc8ig1duq&dl=0) | [BaiduPan](https://pan.baidu.com/s/1b-Elx5a9NHL5E0z_aHoydw?pwd=blk7) code:blk7 |
+| :-----------: | :-----------: |
 
 ### SRD Dataset Evaluation
 1. set the paths of the shadow removal result and the dataset in `evaluation/demo_SRD_RMSE.m` and then run it.
