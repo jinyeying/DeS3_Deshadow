@@ -12,7 +12,7 @@ This is an implementation of DeS3: Attention-driven Self and Soft Shadow Removal
 3. LRSS: Soft Shadow Dataset [[link]](http://visual.cs.ucl.ac.uk/pubs/softshadows/)<br>
    The LRSS dataset contains 134 shadow images (62 pairs of shadow and shadow-free images). <br>
    We use 34 pairs for testing and 100 shadow images for training. For shadow-free training images, 28 from LRSS and 72 randomly selected from the USR dataset.<br>
-   |[Dropbox](https://www.dropbox.com/scl/fo/3dt75e23riozwa6uczeqd/ABNkIZKaP8jFarfNrUUjpVg?rlkey=eyfjn7dhd9pbz6rh247ylbt0c&st=01lh80r8&dl=0)|[BaiduPan](https://pan.baidu.com/s/1c_VsDVC92WnvI92v8cldsg?pwd=t9c7) code:t9c7|
+   |[[Dropbox]](https://www.dropbox.com/scl/fo/3dt75e23riozwa6uczeqd/ABNkIZKaP8jFarfNrUUjpVg?rlkey=eyfjn7dhd9pbz6rh247ylbt0c&st=01lh80r8&dl=0)|[[BaiduPan (code:t9c7)]](https://pan.baidu.com/s/1c_VsDVC92WnvI92v8cldsg?pwd=t9c7)|
    | :-----------: | :-----------: |
   
 5. USR: Unpaired Shadow Removal Dataset [[link]](https://drive.google.com/file/d/1PPAX0W4eyfn1cUrb2aBefnbrmhB1htoJ/view)
@@ -20,7 +20,7 @@ This is an implementation of DeS3: Attention-driven Self and Soft Shadow Removal
 6. UCF, UIUC: Self Shadow [[link]](https://drive.google.com/file/d/1jyzJm13VbvXGocwmywsJ51yqWxAwt_pP/view)
 
 ### 2. SRD Dataset Results:
-|[Dropbox](https://www.dropbox.com/scl/fo/04qdaxrapog8vvikh24d5/h?rlkey=u3e4trwim1im4c2yvc8ig1duq&dl=0) | [BaiduPan](https://pan.baidu.com/s/1b-Elx5a9NHL5E0z_aHoydw?pwd=blk7) code:blk7 |
+|[[Dropbox]](https://www.dropbox.com/scl/fo/04qdaxrapog8vvikh24d5/h?rlkey=u3e4trwim1im4c2yvc8ig1duq&dl=0) | [[BaiduPan(code:blk7)]](https://pan.baidu.com/s/1b-Elx5a9NHL5E0z_aHoydw?pwd=blk7)|
 | :-----------: | :-----------: |
 
 ### SRD Dataset Evaluation
@@ -40,10 +40,37 @@ evaluate_SRD_PSNR_SSIM.m
 ```
 Get the PSNR & SSIM from Table 1 in the main paper on the SRD (size: 256x256):
 
-|    || PSNR   | PSNR |     PSNR   | SSIM   | SSIM |     SSIM  |
+|          |        |   PSNR   |    PSNR    |     PSNR  |   SSIM   |    SSIM    |    SSIM   |
 |----------|--------|----------|------------|-----------|----------|------------|-----------| 
 | Method   |Training| Shadow   | Non-Shadow |    ALL    | Shadow   | Non-Shadow |     ALL   |
-| **DeS3** | Paired | **37.45**| **38.12** | **34.11**  |**0.984** | **0.988**  | **0.968** |
+| **DeS3** | Paired | **37.45**| **38.12**  | **34.11** | **0.984**| **0.988**  | **0.968** |
+
+### 3. AISTD Dataset Results:
+|[[Dropbox]](https://www.dropbox.com/scl/fo/72cvwfs78tvxy8myj3r3j/AOfsrY7CuexxfdYr0_qJPEY?rlkey=58dtz96rfrbn0t9oaff7phpv6&st=jzslheyv&dl=0) | [[BaiduPan(code:blk7)]](https://pan.baidu.com/s/1b-Elx5a9NHL5E0z_aHoydw?pwd=blk7)|
+| :-----------: | :-----------: |
+
+### AISTD Dataset Evaluation
+1. set the paths of the shadow removal result and the dataset in `evaluation/demo_AISTD_RMSE.m` and then run it.
+```
+demo_AISTD_RMSE.m
+```
+Get the RMSE on the AISTD (size: 256x256):
+
+| Method   |Training| Shadow   | Non-Shadow |    ALL    |
+|----------|--------|----------|------------|-----------|
+| **DeS3** | Paired | **6.56** | **3.40** | **3.94** |
+
+2. set the paths of the shadow removal result and the dataset in `evaluation/evaluate_AISTD_PSNR_SSIM.m` and then run it.
+```
+evaluate_AISTD_PSNR_SSIM.m
+```
+Get the PSNR & SSIM on the ISTD (size: 256x256):
+
+|          |        |   PSNR   |    PSNR    |     PSNR  |   SSIM   |    SSIM    |    SSIM   |
+|----------|--------|----------|------------|-----------|----------|------------|-----------| 
+| Method   |Training| Shadow   | Non-Shadow |    ALL    | Shadow   | Non-Shadow |     ALL   |
+| **DeS3** | Paired | **36.49**| **34.70**  | **31.38** | **0.989**| **0.972**  | **0.958** |
+
 
 ## Acknowledgments
 Code is implemented based [WeatherDiffusion](https://github.com/IGITUGraz/WeatherDiffusion), we would like to thank them.
