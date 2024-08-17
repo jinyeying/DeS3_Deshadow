@@ -9,6 +9,7 @@ import torch.utils.data as data
 import torch.backends.cudnn as cudnn
 import utils
 from models.unet import ShadowDiffusionUNet
+from models.transformer2d import My_DiT_test
 
 def data_transform(X):
     return 2 * X - 1.0
@@ -97,6 +98,9 @@ class DenoisingDiffusion(object):
         self.device = config.device
 
         self.model = ShadowDiffusionUNet(config)
+        if self.args.test_set == 'AISTD':
+            self.model = My_DiT_test(input_size=config.data.image_size)
+
         self.model.to(self.device)
         self.model = torch.nn.DataParallel(self.model)
 
