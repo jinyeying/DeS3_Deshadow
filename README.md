@@ -3,6 +3,11 @@
 ## Introduction
 This is an implementation of DeS3: Attention-driven Self and Soft Shadow Removal using ViT Similarity and Color Convergence
 
+```
+git clone https://github.com/jinyeying/DeS3_Deshadow.git
+cd DeS3_Deshadow/
+```
+
 ## 1. Datasets
 1. SRD [Train](https://drive.google.com/file/d/1W8vBRJYDG9imMgr9I2XaA13tlFIEHOjS/view)|[BaiduPan](https://pan.baidu.com/s/1mj3BoRQ), [Test](https://drive.google.com/file/d/1GTi4BmQ0SJ7diDMmf-b7x2VismmXtfTo/view).
 [Shadow Masks](https://github.com/vinthony/ghost-free-shadow-removal)
@@ -48,6 +53,17 @@ Get the PSNR & SSIM from Table 1 in the main paper on the SRD (size: 256x256):
 ### 3. AISTD Dataset Results:
 |[[Dropbox]](https://www.dropbox.com/scl/fo/72cvwfs78tvxy8myj3r3j/AOfsrY7CuexxfdYr0_qJPEY?rlkey=58dtz96rfrbn0t9oaff7phpv6&st=jzslheyv&dl=0) | [[BaiduPan(code:blk7)]](https://pan.baidu.com/s/1b-Elx5a9NHL5E0z_aHoydw?pwd=blk7)|
 | :-----------: | :-----------: |
+
+### AISTD Dataset Train, Test 
+1. modify the path in https://github.com/jinyeying/DeS3_Deshadow/blob/c294476d562b65c8acbf2be8bc0986ebeab00c63/datasets/aistdshadow.py#L30 https://github.com/jinyeying/DeS3_Deshadow/blob/c294476d562b65c8acbf2be8bc0986ebeab00c63/configs/AISTDshadow.yml#L6
+2. download the AISTD checkpoint [[Dropbox]](https://www.dropbox.com/s/q2qgb2e02h48q00/AISTDShadow_ddpm.pth.tar?dl=0) | [[BaiduPan(code:aistd)]](https://pan.baidu.com/s/1PDQXHfE7XUTo_jVpnFiReQ?pwd=aist) 
+
+```
+CUDA_VISIBLE_DEVICES=1,2 python train_aistd.py --config 'AISTDshadow.yml' --resume '/home1/yeying/DeS3_Deshadow/ckpts/AISTDShadow_ddpm.pth.tar'
+```
+```
+CUDA_VISIBLE_DEVICES=1 python eval_aistd.py --config 'AISTDshadow.yml' --resume '/home1/yeying/DeS3_Deshadow/ckpts/AISTDShadow_ddpm.pth.tar'
+```
 
 ### AISTD Dataset Evaluation
 1. set the paths of the shadow removal result and the dataset in `evaluation/demo_AISTD_RMSE.m` and then run it.
