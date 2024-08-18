@@ -17,7 +17,7 @@ def parse_args_and_config():
     parser = argparse.ArgumentParser(description='Restoring AISTD with DeS3')
     parser.add_argument("--config", type=str, default='AISTDshadow.yml',
                         help="Path to the config file")
-    parser.add_argument('--resume', default='/home1/yeying/DeS3_Deshadow_AISTD/ckpts/AISTDShadow_ddpm.pth.tar', type=str,
+    parser.add_argument('--resume', default='/home1/yeying/DeS3_Deshadow/ckpts/AISTDShadow_ddpm.pth.tar', type=str,
                         help='Path for the diffusion model checkpoint to load for evaluation')
     parser.add_argument("--grid_r", type=int, default=16,
                         help="Grid cell width r that defines the overlap between patches")
