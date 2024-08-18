@@ -17,7 +17,7 @@ def parse_args_and_config():
     parser = argparse.ArgumentParser(description='Training DeS3')
     parser.add_argument("--config", type=str, default='AISTDshadow.yml',
                         help="Path to the config file")
-    parser.add_argument('--resume', default='/home1/yeying/DeS3_Deshadow_AISTD/ckpts/AISTDShadow_ddpm.pth.tar', type=str,
+    parser.add_argument('--resume', default='/home1/yeying/DeS3_Deshadow/ckpts/AISTDShadow_ddpm.pth.tar', type=str,
                         help='Path for checkpoint to load and resume')
     parser.add_argument("--test_set", type=str, default='AISTD',
                         help="restoration test set options: ['SRD', 'AISTD', 'LRSS', 'UIUC']")
